@@ -1,4 +1,6 @@
 
+
+
 import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -252,10 +254,10 @@ def bot():
 		# Increases or decreases in profit comparing to last year 
 		
 		if change > 1.00:
-			changetxt = " increase"
+			changetxt = "Increase "
 			
 		elif change < 1.00:
-			changetxt = " decrease"
+			changetxt = "Decrease "
 			
 		else:
 			changetxt = " error"
@@ -266,10 +268,10 @@ def bot():
 		objectivestatus = ""
 		
 		if totalSales > objective:
-			objectivestatus = " reached ✅"
+			objectivestatus = "REACHED"
 			
 		elif totalSales < objective:
-			objectivestatus = " not reached ❌"
+			objectivestatus = "NOT REACHED"
 			
 		else:
 			objectivestatus = " error"
@@ -286,29 +288,55 @@ def bot():
 
 		# Annnddd final output	
 			
-		print("\n\n")
-		print("______________________________________" + "\n\n")
+	#	print("\n\n")
+	#	print("______________________________________" + "\n\n")
 
-		print("[G-Zone銀座ラ・ボエム]  " + currentDate.strftime("%Y-%m-%d") + "\n\n")
+	#	print("[G-Zone銀座ラ・ボエム]  " + currentDate.strftime("%Y-%m-%d") + "\n\n")
 
-		print("Last Year Sales: "+ str("{:,}".format(lastYearSales)) + "円")
-		print("Objective: " + str("{:,}".format(objective)) + "円" + "\n\n")
-		print("3 PM: " + str("{:,}".format(threepm)) + "円")
-		print("6 PM: " + str("{:,}".format(sixpm)) + "円")
-		print("9 PM: " + str("{:,}".format(ninepm)) + "円" + "\n\n")
-		print("Sales: " + str("{:,}".format(totalSales)) + "円" + "\n\n")
-		print(str(change) + "%" + str(changetxt) + " from last year.")
-		print("Objective" + str(objectivestatus) + "\n")
+	#	print("Last Year Sales: "+ str("{:,}".format(lastYearSales)) + "円")
+	#	print("Objective: " + str("{:,}".format(objective)) + "円" + "\n\n")
+	#	print("3 PM: " + str("{:,}".format(threepm)) + "円")
+	#	print("6 PM: " + str("{:,}".format(sixpm)) + "円")
+	#	print("9 PM: " + str("{:,}".format(ninepm)) + "円" + "\n\n")
+	#	print("Sales: " + str("{:,}".format(totalSales)) + "円" + "\n\n")
+	#	print(str(change) + "%" + str(changetxt) + " from last year.")
+	#	print("Objective" + str(objectivestatus) + "\n")
 		
-		print("Monthly Objective: " + str("{:,}".format(monthlyObj)) +  "円")
+	#	print("Monthly Objective: " + str("{:,}".format(monthlyObj)) +  "円")
 		
-		print("Current Monthly Sales: " + str("{:,}".format(current)) + "円" + "\n")
-		print("Amount left to reach objective: " + str("{:,}".format(left)) + "円")
-		print("Progress: " + str(percentage) + "%" + "\n\n")
-		print("______________________________________" + "\n\n")
+	#	print("Current Monthly Sales: " + str("{:,}".format(current)) + "円" + "\n")
+	#	print("Amount left to reach objective: " + str("{:,}".format(left)) + "円")
+	#	print("Progress: " + str(percentage) + "%" + "\n\n")
+	#	print("______________________________________" + "\n\n")
 		
 	
-		
+		# Created the output variables for the JSON file and class parameters
+			
+
+		objectivestatus_o = str(objectivestatus) 	
+		date_o = currentDate.strftime("%Y-%m-%d")
+
+		lastYearSales_o = str("{:,}".format(lastYearSales)) + "円"
+		objective_o = str("{:,}".format(objective)) + "円"
+		totalSales_o = str("{:,}".format(totalSales)) + "円"
+
+		threepm_o = str("{:,}".format(threepm)) + "円"
+		sixpm_o = str("{:,}".format(sixpm)) + "円"
+		ninepm_o = str("{:,}".format(ninepm)) + "円"
+
+		changetxt_o = str(changetxt)
+		change_o = str(change) + "%"
+
+		monthlyObj_o = str("{:,}".format(monthlyObj)) +  "円"
+		current_o = str("{:,}".format(current)) + "円"
+
+		left_o = str("{:,}".format(left)) + "円"
+		percentage_o = str(percentage) + "%"
+
+
+
+
+
 	
 		
 bot()
