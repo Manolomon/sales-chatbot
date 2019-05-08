@@ -211,7 +211,7 @@
               },
               {
                 "type": "text",
-                "text": "{{ data.change_text }}",
+                "text": "{{ data.changes }}",
                 "size": "sm",
                 "color": "#111111",
                 "align": "end"
