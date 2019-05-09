@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, request, abort
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import json
