@@ -30,32 +30,32 @@ template_env = Environment(
 
 users = []
 global month
-	global current
-	global left
-	global monthlyObj
-	global objList
-	global pastList
-	global currentDate
+global current
+global left
+global monthlyObj
+global objList
+global pastList
+global currentDate
 
-	global objectivestatus_o 	
-	global date_o 
+global objectivestatus_o 	
+global date_o 
 
-	global lastYearSales_o
-	global objective_o 
-	global totalSales_o 
+global lastYearSales_o
+global objective_o 
+global totalSales_o 
 
-	global threepm_o 
-	global sixpm_o 
-	global ninepm_o 
+global threepm_o 
+global sixpm_o 
+global ninepm_o 
 
-	global changetxt_o 
-	global change_o 
+global changetxt_o 
+global change_o 
 
-	global monthlyObj_o 
-	global current_o 
+global monthlyObj_o 
+global current_o 
 
-	global left_o 
-	global percentage_o 
+global left_o 
+global percentage_o 
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -95,16 +95,14 @@ def handle_message(event):
     # Send the structured message. Note, the template needs to be parsed to 
     # an Flex MessageUI element, in this case a BubbleContainer
     message = FlexSendMessage(alt_text = "Sales Report", contents=BubbleContainer.new_from_json_dict(json.loads(data)))
-    line_bot_api.reply_message(event.reply_token, message)
-    send_push_message()
+    #line_bot_api.reply_message(event.reply_token, message)
 
 def send_push_message():
     data = SalesReport(objectivestatus_o, '#FFC107', date_o, lastYearSales_o, totalSales_o, objective_o, threepm_o, sixpm_o, ninepm_o, change_o, monthlyObj_o, current_o, left_o, percentage_o);
     template = template_env.get_template('sales-report.json')
     data = template.render(dict(data=data))
     message = FlexSendMessage(alt_text = "Sales Report", contents=BubbleContainer.new_from_json_dict(json.loads(data)))
-    for user in users:
-        line_bot_api.push_message(user, message)
+    #line_bot_api.push_message(user, message)
 
 import os
 if __name__ == "__main__":
