@@ -125,97 +125,97 @@ sdate = int(fdate)
 
 
 if sdate == 1:
-	firstInput = ws.update_acell('J5', str(inputt))
+	secondInput = ws.update_acell('K5', str(inputt))
 	
 elif sdate == 2:
-	firstInput = ws.update_acell('J6', str(inputt))
+	secondInput = ws.update_acell('K6', str(inputt))
 
 elif sdate == 3:
-	firstInput = ws.update_acell('J7', str(inputt))
+	secondInput = ws.update_acell('K7', str(inputt))
 
 elif sdate == 4:
-	firstInput = ws.update_acell('J8', str(inputt))
+	secondInput = ws.update_acell('K8', str(inputt))
 
 elif sdate == 5:
-	firstInput = ws.update_acell('J9', str(inputt))
+	secondInput = ws.update_acell('K9', str(inputt))
 
 elif sdate == 6:
-	firstInput = ws.update_acell('J10', str(inputt))
+	secondInput = ws.update_acell('K10', str(inputt))
 
 elif sdate == 7:
-	firstInput = ws.update_acell('J11', str(inputt))
+	secondInput = ws.update_acell('K11', str(inputt))
 
 elif sdate == 8:
-	firstInput = ws.update_acell('J12', str(inputt))
+	secondInput = ws.update_acell('K12', str(inputt))
 
 elif sdate == 9:
-	firstInput = ws.update_acell('J13', str(inputt))
+	secondInput = ws.update_acell('K13', str(inputt))
 
 elif sdate == 10:
-	firstInput = ws.update_acell('J14', str(inputt))
+	secondInput = ws.update_acell('K14', str(inputt))
 	
 elif sdate == 11:
-	firstInput = ws.update_acell('J15', str(inputt))
+	secondInput = ws.update_acell('K15', str(inputt))
 	
 elif sdate == 12:
-	firstInput = ws.update_acell('J16', str(inputt))
+	secondInput = ws.update_acell('K16', str(inputt))
 
 elif sdate == 13:
-	firstInput = ws.update_acell('J17', str(inputt))
+	secondInput = ws.update_acell('K17', str(inputt))
 
 elif sdate == 14:
-	firstInput = ws.update_acell('J18', str(inputt))
+	secondInput = ws.update_acell('K18', str(inputt))
 	
 elif sdate == 15:
-	firstInput = ws.update_acell('J19', str(inputt))
+	secondInput = ws.update_acell('K19', str(inputt))
 
 elif sdate == 16:
-	firstInput = ws.update_acell('J20', str(inputt))
+	secondInput = ws.update_acell('K20', str(inputt))
 
 elif sdate == 17:
-	firstInput = ws.update_acell('J21', str(inputt))
+	secondInput = ws.update_acell('K21', str(inputt))
 	
 elif sdate == 18:
-	firstInput = ws.update_acell('J22', str(inputt))
+	secondInput = ws.update_acell('K22', str(inputt))
 
 elif sdate == 19:
-	firstInput = ws.update_acell('J23', str(inputt))
+	secondInput = ws.update_acell('K23', str(inputt))
 
 elif sdate == 20:
-	firstInput = ws.update_acell('J24', str(inputt))
+	secondInput = ws.update_acell('K24', str(inputt))
 
 elif sdate == 21:
-	firstInput = ws.update_acell('J25', str(inputt))
+	secondInput = ws.update_acell('K25', str(inputt))
 
 elif sdate == 22:
-	firstInput = ws.update_acell('J26', str(inputt))
+	secondInput = ws.update_acell('K26', str(inputt))
 
 elif sdate == 23:
-	firstInput = ws.update_acell('J27', str(inputt))
+	secondInput = ws.update_acell('K27', str(inputt))
 
 elif sdate == 24:
-	firstInput = ws.update_acell('J28', str(inputt))
+	secondInput = ws.update_acell('K28', str(inputt))
 
 elif sdate == 25:
-	firstInput = ws.update_acell('J29', str(inputt))
+	secondInput = ws.update_acell('K29', str(inputt))
 
 elif sdate == 26:
-	firstInput = ws.update_acell('J30', str(inputt))
+	secondInput = ws.update_acell('K30', str(inputt))
 
 elif sdate == 27:
-	firstInput = ws.update_acell('J31', str(inputt))
+	secondInput = ws.update_acell('K31', str(inputt))
 	
 elif sdate == 28:
-	firstInput = ws.update_acell('J32', str(inputt))
+	secondInput = ws.update_acell('K32', str(inputt))
 	
 elif sdate == 29:
-	firstInput = ws.update_acell('J33', str(inputt))
+	secondInput = ws.update_acell('K33', str(inputt))
 	
 elif sdate == 30:
-	firstInput = ws.update_acell('J34', str(inputt))
+	secondInput = ws.update_acell('K34', str(inputt))
 	
 elif sdate == 31:
-	firstInput = ws.update_acell('J35', str(inputt))
+	secondInput = ws.update_acell('K35', str(inputt))
 	
 else:
 	print("dateTime error")
