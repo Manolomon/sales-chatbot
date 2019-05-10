@@ -18,8 +18,8 @@ from sales_report import SalesReport
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi(config.CHANNEL_ACCESS_TOKEN)
-handler = WebhookHandler(config.CHANNEL_SECRET)
+line_bot_api = LineBotApi(config.Config.CHANNEL_ACCESS_TOKEN)
+handler = WebhookHandler(config.Config.CHANNEL_SECRET)
 
 # Template format definition
 # Plus, the template was made on the LINE Flex Message Simulator

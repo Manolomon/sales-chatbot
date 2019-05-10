@@ -16,12 +16,12 @@ class DataProvider:
         scope = ['https://www.googleapis.com/auth/spreadsheets.readonly',
             'https://www.googleapis.com/auth/drive.readonly']
             
-        creds = ServiceAccountCredentials.from_json_keyfile_name(config.API_KEY_FILENAME, scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name(config.Config.API_KEY_FILENAME, scope)
         client = gspread.authorize(creds)
 
         # Find a workbook by name and open the first sheet
         # Make sure you use the right name here.
-        sheet = client.open(config.SHEET_NAME).sheet1
+        sheet = client.open(config.Config.SHEET_NAME).sheet1
 
         # Extract the data from the cells of interest
         self.objetiveList = sheet.acell(obj_cells).value
